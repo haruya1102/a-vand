@@ -25,7 +25,7 @@ const ParticipantList = ({ participants, handleDeleteParticipant }) => {
                                 <p class="pt-2 text-lg font-medium">{participant.grade}</p>
                             </div>
                         </div>
-                        <p class="pl-8 pt-2 text-lg font-medium">{participant.hope}</p>
+                        <p class="px-8 pt-2 text-lg font-medium">{participant.hope}</p>
                         <div class="flex pt-5 pl-8">
                             {participant.url && (
                                 <button

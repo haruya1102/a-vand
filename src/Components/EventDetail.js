@@ -148,8 +148,8 @@ const EventDetail = () => {
                 {!isEditing ? (
                     <div class=" mx-10 py-7">
                         <div class="flex justify-between pb-8">
-                            <h3 class=" text-5xl font-semibold mt-3">{event.title}</h3>
-                            <div class="text-base font-medium border-l pl-4">
+                            <h3 class="text-3xl lg:text-5xl font-semibold mt-3 mr-2">{event.title}</h3>
+                            <div class=" font-medium border-l pl-4">
                                 <p>作成者：{event.author}</p>
                                 <p>日付：{event.date}</p>
                                 <p>場所：{event.place}</p>
