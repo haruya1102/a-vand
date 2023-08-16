@@ -133,7 +133,7 @@ const Main = () => {
                         <div class="w-full">
                             <div key={event.id} class=" bg-main rounded-lg text-white h-40 mx-2 my-2">
                                 <div class="flex justify-between">
-                                    <h3 class=" text-4xl font-semibold pl-6 pt-5">{event.title}</h3>
+                                    <h3 class=" text-2xl lg:text-4xl font-semibold pl-6 pt-5">{event.title}</h3>
                                     <div class="text-slate-300 pt-5 pr-6">
                                         <p >{event.date}</p>
                                         <p>{event.place}</p>
