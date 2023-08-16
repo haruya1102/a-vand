@@ -1,3 +1,5 @@
+// ParticipantForm.js
+
 import React from 'react';
 
 const ParticipantForm = ({ participantForm, handleFormInputChange, handleAddParticipant }) => {

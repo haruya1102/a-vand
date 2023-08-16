@@ -1,3 +1,5 @@
+// EventDetail.js
+
 import { useParams } from 'react-router-dom';
 import { arrayRemove, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { auth, db } from './Firebase';

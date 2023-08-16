@@ -1,7 +1,10 @@
+// MyPage.js
+
 import React, { useEffect, useState } from 'react';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { auth, db } from './Firebase';
 import Header from './Header';
+import { Link } from 'react-router-dom';
 
 const MyPage = () => {
     const [name, setName] = useState('');
@@ -138,6 +141,9 @@ const MyPage = () => {
                                 </svg>
                             </button>
                             <button onClick={handleEdit} class="bg-accent hover:bg-accent/80 rounded-lg font-semibold text-lg py-3 px-5 my-4">編集</button>
+                            <button onClick={() => auth.signOut()} class="bg-accent hover:bg-accent/80 rounded-lg font-semibold text-lg py-3 px-5 my-4 ml-4">
+                                <Link to="/sign-in" >サインアウト</Link>
+                            </button>
                         </div>
                     </div>
                 )}

@@ -1,3 +1,5 @@
+//Main.js
+
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import { collection, addDoc, onSnapshot, deleteDoc, doc, getDoc } from 'firebase/firestore';
@@ -74,11 +76,11 @@ const Main = () => {
         <div>
             <Header />
             <div class=" w-screen lg:w-3/5 m-auto">
-                <button onClick={onClickNewEvent} class="text-white  bg-accent hover:bg-accent/60 inline-flex items-center rounded-lg font-semibold text-xl px-8 py-3 mt-4 ">
+                <button onClick={onClickNewEvent} class="text-white  bg-accent hover:bg-accent/60 inline-flex items-center rounded-lg font-semibold text-xl px-8 py-3 mt-4 ml-2">
                     新規作成
                 </button>
 
-                <div class={newevent ? "flex flex-col p-5 bg-main rounded-lg" : " hidden"}>
+                <div class={newevent ? "flex flex-col p-5 mx-2 bg-main rounded-lg" : " hidden"}>
                     <p class="mx-3 text-white text-lg font-semibold">タイトル</p>
                     <input
                         type="text"
