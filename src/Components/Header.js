@@ -21,7 +21,7 @@ const Header = () => {
                         <Link to="/user-list" class="text-white hover:text-white/75 text-sm lg:text-xl inline-flex items-center font-semibold mr-4 lg:mr-16" aria-controls="mobile-menu-2" aria-expanded="false">
                             ユーザーリスト
                         </Link>
-                        <Link to="/mypage" class="text-white hover:text-white/75 text-sm lg:text-xl inline-flex items-center font-semibold">
+                        <Link to="/my-page" class="text-white hover:text-white/75 text-sm lg:text-xl inline-flex items-center font-semibold">
                             マイページ
                         </Link>
                     </div>
