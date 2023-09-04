@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/sign-in" element={<SignIn />} />
         <Route index element={(user ? <Main /> : <SignIn />)} />
         <Route path='/event/:id' element={<EventDetail />} />
-        <Route path="/mypage" element={<MyPage />} />
+        <Route path="/my-page" element={<MyPage />} />
         <Route path="*" element={<NoMatch />} />
         <Route path="/user-list" element={<UserList />} />
         <Route path="/chat/:participantId" element={<Chat />} />
