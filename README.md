@@ -1,72 +1,50 @@
-# Getting Started with Create React App
+## 簡易仕様書
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 概要
+- **作者**: 山内陽哉
+- **アプリ名**: A-VAND
+- **開発環境**: vsCode
+- **開発言語**: JavaScript
+- **フレームワーク**: React,Firebase,tailwindcss
+- **動作対象ブラウザ**: Chrome 120.0.6099.129
+- **開発期間**: 2ヶ月
+- **主要機能**:
+  1. **開催予定ライブの一覧表示**: 今後開催予定の定期ライブを一覧で表示する。
+  2. **ライブの詳細表示**: 各ライブのタイトル、日付、場所、説明などの詳細情報を表示する。
+  3. **バンドマッチング機能**: 各ライブ毎にエントリーしたいメンバーを一覧表示する。
+  4. **チャット機能**: メンバー一覧やバンドマッチングから各メンバーに個人チャットができる。
 
-## Available Scripts
+## アーキテクチャ
+- **コンポーネント構造**:
+  -  `App.js`: メインコンポーネント。ルーティングの設定を含む。
+  - `Router.js`: ルーティングの機能を備えたファイル。
+  - `Conponents`:各コンポーネントが含まれているフォルダ。
+    - `Main.js`: 開催予定ライブの新規作成、一覧表示するホーム画面。
+    - `Header.js`: ヘッダーのコンポーネント。ホーム画面、ユーザーリスト、マイページのリンクを表示。
+    - `MyPage.js`: 自分のプロフィールを確認、編集できる画面。
+    - `UserList.js`: ログインされたユーザーの一覧表示画面。
+    - `EventDetail.js`: ライブの詳細画面＆バンドマッチング画面の表示。
+    - `ParticipantForm.js`: バンドマッチングの入力フォーム画面のコンポーネント。
+    - `ParticipantList.js`: バンドマッチングの一覧表示のためのコンポーネント。
+    - `SignIn.js`:　サインイン画面。
+    - `Chat.js`: チャット画面。
+    - `Firebase.js`: firebaseとの連携を実行するファイル。
+    - `NoMatch.js`: 404ページの表示。
 
-In the project directory, you can run:
+## コンセプト
+関西学院大学軽音サークル「AVANT-GARDE」専用のバンドメンバーマッチングアプリ。
 
-### `npm start`
+## 背景
+関西学院大学軽音サークル「AVANT-GARDE」では、2ヶ月に1度ほどでコピーバンドとして行う定期ライブがあります。しかし、そのライブ毎に自分たちでメンバーを集めてエントリーする必要があります。そのため、誰がライブに出たいのか、どんなコピーバンドをしたいのかなどの情報を知るために一人一人に連絡を取る必要がありました。その悩みを解消するために、一目で誰がどのライブに出たいのかを可視化でき、コミュニケーションが取れるシンプルなアプリを作りました。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## こだわったポイント
+全体的に、シンプルで誰でも使いやすいデザインにしています。
+また、レスポンシブデザインに対応しスマートフォン、タブレット、パソコンなどあらゆるハードでの利用を想定しています。
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### サイトURL
+- https://avan-app-user.web.app/
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# a-vand
-# a-vand
+#### GitHubリポジトリ
+- アカウント名: `haruya1102`
+- リポジトリ名: `a-vand`
+- URL: https://github.com/haruya1102/a-vand.git
